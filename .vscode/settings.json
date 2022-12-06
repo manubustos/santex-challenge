@@ -1,0 +1,7 @@
+{
+  "editor.formatOnSave": true,
+  "cSpell.diagnosticLevel": "Hint",
+  "cSpell.language": "en,es",
+  "editor.rulers": [115],
+  "task.autoDetect": "off"
+}

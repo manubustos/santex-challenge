@@ -1,0 +1,41 @@
+type Competition {
+  id: Int
+  code: String
+  name: String
+  areaName: String
+}
+
+type Team {
+  id: Int
+  name: String
+  tla: String
+  shortName: String
+  areaName: String
+  address: String
+  players: [Person]
+}
+
+enum PersonType {
+  PLAYER
+  COACH
+}
+
+type Person {
+  id: Int
+  name: String
+  position: String
+  dateOfBirth: String
+  nationality: String
+  type: PersonType
+  team: String
+  competition: String
+}
+
+type Mutation {
+  importLeague(leagueCode: String!): Boolean
+}
+
+type Query {
+  players(leagueCode: String!, teamName: String): [Person]
+  team(teamName: String!): Team
+}
